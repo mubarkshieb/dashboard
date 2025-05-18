@@ -1,0 +1,50 @@
+.grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    padding: 1rem;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+}
+
+.label {
+    font-size: 0.875rem;
+    color: #666666;
+    margin: 0;
+}
+
+.value {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.blue {
+    color: #2563eb;
+}
+
+.green {
+    color: #16a34a;
+}
+
+.red {
+    color: #dc2626;
+}
+
+.purple {
+    color: #9333ea;
+}

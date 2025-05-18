@@ -24,7 +24,7 @@ const DeviceTable = () => {
     return (
         <div className={styles.container}>
             <TableContainer sx={{ borderRadius: 3, overflow: 'hidden' }} component={Paper}>
-                <Table sx={{ minWidth: 500 }} aria-label="simple table">
+                <Table sx={{ minWidth: 550 }} aria-label="simple table">
                     <TableHead>
                         <TableRow>
                             <TableCell>Device Name</TableCell>
