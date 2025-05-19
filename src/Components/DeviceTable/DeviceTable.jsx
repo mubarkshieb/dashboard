@@ -1,57 +1,48 @@
-import React from 'react'
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
-import styles from './DeviceTable.module.css'
+'use client';
 
-function createData(deviceName, ipAddress, deviceStatus, lastUp) {
-    return { deviceName, ipAddress, deviceStatus, lastUp };
-}
+import { useRouter } from 'next/navigation';
+import styles from './DeviceTable.module.css';
 
-const rows = [
-    createData('cam_1', '192.168.1.155', 'Up', '0:44:13'),
-    createData('cam_2', '192.168.1.59', 'Up', '1:40'),
-    createData('cam_3', '192.168.1.232', 'down', '1Day,5Hours'),
-    createData('cam_5', '192.168.1.115', 'Up', '5 Hours'),
-    createData('cam_10', '192.168.1.15', 'Up', '2Days'),
+const devices = [
+    { id: '1', name: 'Camera-1', ip: '192.168.1.10', status: 'Up', lastUp: '2025-05-19 08:00' },
+    { id: '2', name: 'Camera-2', ip: '192.168.1.11', status: 'Down', lastUp: '2025-05-18 23:45' },
+    { id: '3', name: 'Server-1', ip: '192.168.1.20', status: 'Up', lastUp: '2025-05-19 07:50' },
+    { id: '4', name: 'Router', ip: '192.168.1.1', status: 'Up', lastUp: '2025-05-19 07:55' },
+    { id: '5', name: 'Switch', ip: '192.168.1.2', status: 'Up', lastUp: '2025-05-19 07:48' },
+    { id: '6', name: 'Camera-3', ip: '192.168.1.12', status: 'Down', lastUp: '2025-05-18 22:15' },
 ];
-const DeviceTable = () => {
+
+export default function DeviceTable() {
+    const router = useRouter();
+
+    const handleClick = (id) => {
+        router.push(`/devices/${id}`);
+    };
 
     return (
         <div className={styles.container}>
-            <TableContainer sx={{ borderRadius: 3, overflow: 'hidden' }} component={Paper}>
-                <Table sx={{ minWidth: 550 }} aria-label="simple table">
-                    <TableHead>
-                        <TableRow>
-                            <TableCell>Device Name</TableCell>
-                            <TableCell align="right">IP Address</TableCell>
-                            <TableCell align="right">Device Status</TableCell>
-                            <TableCell align="right">last up</TableCell>
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {rows.map((row) => (
-                            <TableRow
-                                key={row.ipAddress}
-                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                            >
-                                <TableCell component="th" scope="row">
-                                    {row.deviceName}
-                                </TableCell>
-                                <TableCell align="right">{row.ipAddress}</TableCell>
-                                <TableCell align="right">{row.deviceStatus}</TableCell>
-                                <TableCell align="right">{row.lastUp}</TableCell>
-                            </TableRow>
-                        ))}
-                    </TableBody>
-                </Table>
-            </TableContainer>
+            <table className={styles.table}>
+                <thead>
+                    <tr>
+                        <th>Device Name</th>
+                        <th>IP Address</th>
+                        <th>Status</th>
+                        <th>Last Up</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {devices.map((device) => (
+                        <tr key={device.id} onClick={() => handleClick(device.id)} className={styles.row}>
+                            <td>{device.name}</td>
+                            <td>{device.ip}</td>
+                            <td className={device.status === 'Up' ? styles.statusUp : styles.statusDown}>
+                                {device.status}
+                            </td>
+                            <td>{device.lastUp}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </div>
-    )
+    );
 }
-
-export default DeviceTable
