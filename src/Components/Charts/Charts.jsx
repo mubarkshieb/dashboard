@@ -11,7 +11,7 @@ const Charts = () => {
                 <div className={styles.chart1}><LineChart /></div>
             </div>
             <div className={styles.right}>
-                <div className={styles.chart2}>2</div>
+                <div className={styles.chart2}><LineChart /></div>
             </div>
         </div>
     )
