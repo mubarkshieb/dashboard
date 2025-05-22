@@ -9,7 +9,6 @@ export default function DevicePage({ params }) {
     if (!device) {
         return <p style={{ color: 'red' }}>Device not found.</p>;
     }
-
     return (
         <div style={{ padding: '20px' }}>
             <h1>Device Details</h1>

@@ -1,0 +1,23 @@
+.layoutContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.mainContent {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    width: 85px;
+    background-color: #206957;
+    color: white;
+    padding: 16px;
+}
+
+.contentArea {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+}

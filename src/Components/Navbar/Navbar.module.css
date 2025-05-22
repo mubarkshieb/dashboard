@@ -22,3 +22,7 @@
 .logo span {
     color: #e74c3c;
 }
+
+.icons {
+    cursor: pointer;
+}
