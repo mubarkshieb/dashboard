@@ -2,6 +2,7 @@
     display: flex;
     width: 100%;
     height: 100vh;
+
 }
 
 .left,
@@ -19,8 +20,9 @@
     width: 95%;
     height: 95%;
     color: white;
+    background-color: white;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
 
 }
 
@@ -31,8 +33,7 @@
     align-items: center;
     width: 95%;
     height: 95%;
-    background-color: rgb(120, 183, 194);
+    background-color: white;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
 }
