@@ -27,8 +27,8 @@ const data = {
         {
             label: 'Network Latency (ms)',
             data: [20, 30, 25, 35, 28],
-            borderColor: 'rgb(0, 0, 0)',
-            backgroundColor: 'rgba(0, 0, 0, 0.2)',
+            borderColor: 'rgb(255, 255, 255)',
+            backgroundColor: 'rgba(255, 255, 255, 0.2)',
             tension: 0.3,
         },
     ],

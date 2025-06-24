@@ -3,19 +3,23 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  background-color: #000000;
 }
 
 .middlesection {
   display: flex;
   flex: 1;
+  background-color: #000000;
 }
 
 .sidebar {
   flex: 0.4;
-  background-color: #f0f0f0;
+  background-color: #000000;
+  color: white
 }
 
 .content {
   flex: 4;
-  background-color: #ffffff;
+  background-color: #181717;
+  border-radius: 20px;
 }

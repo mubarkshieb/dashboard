@@ -1,7 +1,7 @@
 .container {
     max-height: 300px;
     overflow-y: auto;
-    border: 1px solid #ccc;
+    border: 1px solid #fffafa;
     border-radius: 12px;
     width: 100%;
 }
@@ -20,7 +20,8 @@
 }
 
 .table thead {
-    background-color: #f7f7f7;
+    background-color: #000000;
+    color: white;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -29,10 +30,13 @@
 .row {
     cursor: pointer;
     transition: background 0.2s;
+    background-color: #000000;
+    color: white;
 }
 
 .row:hover {
-    background-color: #f0f0f0;
+    background-color: white;
+    color: #000000;
 }
 
 .statusUp {
