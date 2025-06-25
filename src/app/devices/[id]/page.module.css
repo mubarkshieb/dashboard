@@ -2,17 +2,20 @@
     display: flex;
     flex-direction: column;
     padding: 20px;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-left: 5px;
     margin-right: 5px;
-    background-color: aqua;
-    border-radius: 10px;
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 15px;
 }
 
 .table {
     flex: 1;
     width: 100%;
 }
+
+
 
 .table td {
     margin-bottom: 50px;
