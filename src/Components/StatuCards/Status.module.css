@@ -4,15 +4,17 @@
     justify-content: space-between;
     gap: 1rem;
     padding: 1rem;
+    width: 100%;
 }
 
 .card {
     display: flex;
     align-items: center;
     gap: 1rem;
-    background-color: #ffffff;
+    background-color: #000000;
+    color: white;
     border-radius: 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.07);
     padding: 1rem;
 }
 
@@ -23,7 +25,7 @@
 
 .label {
     font-size: 0.875rem;
-    color: #666666;
+    color: #ffffff;
     margin: 0;
 }
 

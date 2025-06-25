@@ -1,3 +1,5 @@
+"use client"
+
 import styles from './page.module.css';
 const dummyData = [
     { id: '1', name: 'Camera-1', ip: '192.168.1.10', status: 'Up', lastUp: '2025-05-19 08:00' },
